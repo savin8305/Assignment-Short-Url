@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Course Purchase Confirmation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            background-image: url("https://i.pinimg.com/236x/99/35/b3/9935b305f2115385c38fd3f62098983b.jpg");
+
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        #header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #contact-info,
+        #order-info,
+        #product-details,
+        #payment-details,
+        #note {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            color: #9c27b0;
+            margin-bottom: 10px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+        }
+
+        .total-amount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .total-amount p {
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            position: relative;
+        }
+
+        th {
+            background-color: #9c27b0;
+            color: #fff;
+        }
+
+        table::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(45deg, #9c27b0, #fff, #9c27b0, #fff, #9c27b0);
+            background-size: 400% 400%;
+            animation: gradient-animation 5s infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradient-animation {
+
+            0%,
+            100% {
+                background-position: 0 0;
+            }
+
+            25%,
+            75% {
+                background-position: 100% 0;
+            }
+
+            50% {
+                background-position: 0 100%;
+            }
+        }
+
+        .e-card {
+            margin: 20px 0;
+            background: transparent;
+            box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+            position: relative;
+            width: 100%;
+            /* Adjust width as needed */
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(45deg, #af40ff, #5b42f3, #00ddeb);
+            opacity: 0.6;
+            animation: wave 5s infinite linear;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .order-info-table,
+        .product-details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .order-info-table th,
+        .order-info-table td,
+        .product-details-table th,
+        .product-details-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .order-info-table th,
+        .order-info-table td {
+            background-color: #9c27b0;
+            color: #fff;
+        }
+
+        .advanced-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .advanced-table th,
+        .advanced-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .advanced-table th {
+            background-color: #9c27b0;
+            color: #fff;
+        }
+
+        .advanced-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-text {
+            color: #9c27b0;
+            font-weight: bold;
+        }
+
+        .animated-text {
+            animation: color-change 5s infinite;
+        }
+
+        @keyframes color-change {
+
+            0%,
+            100% {
+                color: #9c27b0;
+            }
+
+            50% {
+                color: #5b42f3;
+            }
+        }
+
+        .note-box {
+            border: 2px solid #9c27b0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Additional Animation for Note Box */
+        .note-box:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+         
+        </div>
+
+        <div id="contact-info">
+            <p class="section-title">Contact Information</p>
+            <ul class="info-list">
+                <li>9ZXY-123 Exoplanet XZ-42</li>
+                <li>Galactic Quadrant 7B Celestial District, Alpha Centauri</li>
+                <li>Phone: 8305838352 | Email: kanhaji0402@gmail.com</li>
+            </ul>
+        </div>
+
+        <div id="order-info">
+            <p class="section-title">Order Information</p>
+            <table class="order-info-table">
+                <tr>
+                    <th>Order Number</th>
+                    <td>
+                        <%=order._id%>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Order Date</th>
+                    <td>
+                        <%=order.date%>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="product-details">
+            <p class="section-title">Product Details</p>
+            <table class="advanced-table product-details-table">
+                <tbody>
+
+                    <tr>
+                        <th>Payment Gateway</th>
+                        <td>Online Payment Gateway</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>
+                            <%=order.name%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Quantity</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Confirmation By</th>
+                        <td>Savin Vishwakarma</td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td>$<%=order.price%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Order ID</th>
+                        <td>
+                            <%=order._id%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td>$<%=order.price%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="payment-details">
+            <p class="section-title">Payment Details</p>
+            <div class="e-card">
+                <div class="wave"></div>
+                <table>
+                    <tr>
+                        <th colspan="2">Payment Method (Bank Transfer)</th>
+                    </tr>
+                    <tr>
+                        <td>Bank Name:</td>
+                        <td>[Your Bank Name]</td>
+                    </tr>
+                    <tr>
+                        <td>Account Name:</td>
+                        <td>[Your Account Name]</td>
+                    </tr>
+                    <tr>
+                        <td>Bank Address:</td>
+                        <td>[Your Bank Address]</td>
+                    </tr>
+                    <tr>
+                        <td>Account Number:</td>
+                        <td>[Your Account Number]</td>
+                    </tr>
+                    <tr>
+                        <td>Bank Code:</td>
+                        <td>[Your Bank Code]</td>
+                    </tr>
+                    <tr>
+                        <td>SWIFT Code:</td>
+                        <td>[Your SWIFT Code]</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="total-amount">
+            <p class="highlight-text animated-text">Total Amount:</p>
+            <p class="highlight-text animated-text">$<%=order.price%></p>
+        </div>
+
+        <div id="note" class="note-box">
+            <p class="section-title">Note</p>
+            <p class="animated-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

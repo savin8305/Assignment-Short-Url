@@ -1,0 +1,50 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/material": "^5.14.20",
+    "@nivo/line": "^0.55.0",
+    "@reduxjs/toolkit": "^2.0.1",
+    "@types/axios": "^0.14.0",
+    "@types/shortid": "^0.0.32",
+    "@types/valid-url": "^1.0.7",
+    "axios": "^1.6.7",
+    "formik": "^2.4.5",
+    "framer-motion": "^10.16.16",
+    "nanoid": "^5.0.5",
+    "next": "14.0.4",
+    "next-auth": "^4.24.5",
+    "next-themes": "^0.2.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.12.0",
+    "react-pro-sidebar": "^0.7.1",
+    "react-redux": "^9.0.4",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9",
+    "validator": "^13.11.0",
+    "yup": "^1.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.3.3"
+  }
+}
